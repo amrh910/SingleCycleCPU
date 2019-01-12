@@ -1,0 +1,41 @@
+C:/Users/Amr/Desktop/SingleCycleCPU/mux.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/Amr/Desktop/SingleCycleCPU/mux.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity mux
+-- Compiling architecture arch of mux
+
+} {} {}} C:/Users/Amr/Desktop/SingleCycleCPU/pc.vhd {0 {vcom -work work -2002 -explicit -stats=none C:/Users/Amr/Desktop/SingleCycleCPU/pc.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Loading package STD_LOGIC_UNSIGNED
+-- Compiling entity PC
+-- Compiling architecture behav of PC
+** Error (suppressible): C:/Users/Amr/Desktop/SingleCycleCPU/pc.vhd(20): (vcom-1272) Length of expected is 5; length of actual is 32.
+** Warning: C:/Users/Amr/Desktop/SingleCycleCPU/pc.vhd(22): (vcom-1272) Length of expected is 32; length of actual is 5.
+** Error: C:/Users/Amr/Desktop/SingleCycleCPU/pc.vhd(26): VHDL Compiler exiting
+
+} {12.0 13.0} {}} C:/Users/Amr/Desktop/SingleCycleCPU/add.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/Amr/Desktop/SingleCycleCPU/add.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Loading package STD_LOGIC_UNSIGNED
+-- Compiling entity add
+-- Compiling architecture arch of add
+
+} {} {}} C:/Users/Amr/Desktop/SingleCycleCPU/signExt.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/Amr/Desktop/SingleCycleCPU/signExt.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity signExt
+-- Compiling architecture arch of signExt
+
+} {} {}}

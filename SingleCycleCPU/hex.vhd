@@ -1,0 +1,312 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity hexConvert is
+	port(
+		bin 		: IN std_logic_vector(31 downto 0);
+		hex8 		: OUT std_logic_vector(6 downto 0);
+		hex7 		: OUT std_logic_vector(6 downto 0);
+		hex6 		: OUT std_logic_vector(6 downto 0);
+		hex5 		: OUT std_logic_vector(6 downto 0);
+		hex4 		: OUT std_logic_vector(6 downto 0);
+		hex3 		: OUT std_logic_vector(6 downto 0);
+		hex2 		: OUT std_logic_vector(6 downto 0);
+		hex1 		: OUT std_logic_vector(6 downto 0)
+		);
+end hexConvert;
+
+architecture arch of hexConvert is
+begin
+	process(bin)
+	begin
+		
+	case bin(31 downto 28) is
+		when "0000" => 
+				hex8 <= "0000001";
+			when "0001" => 
+				hex8 <= "1001111";
+			when "0010" => 
+				hex8 <= "0010010";
+			when "0011" =>
+				hex8 <= "0000110";
+			when "0100" => 
+				hex8 <= "1001100";
+			when "0101" => 
+				hex8 <= "0100100";
+			when "0110" => 
+				hex8 <= "0100000";
+			when "0111" => 
+				hex8 <= "0001111";
+			when "1000" => 
+				hex8 <= "0000000";
+			when "1001" => 
+				hex8 <= "0001100";
+			when "1010" => 
+				hex8 <= "0001000";
+			when "1011" => 
+				hex8 <= "1100000";
+			when "1100" => 
+				hex8 <= "0110001";
+			when "1101" => 
+				hex8 <= "1000010";
+			when "1110" => 
+				hex8 <= "0110000";
+			when "1111" => 
+				hex8 <= "0111000";
+				when others => null;
+	end case;
+	
+	case bin(27 downto 24) is 
+			when "0000" => 
+				hex7 <= "0000001";
+			when "0001" => 
+				hex7 <= "1001111";
+			when "0010" => 
+				hex7 <= "0010010";
+			when "0011" =>
+				hex7 <= "0000110";
+			when "0100" => 
+				hex7 <= "1001100";
+			when "0101" => 
+				hex7 <= "0100100";
+			when "0110" => 
+				hex7 <= "0100000";
+			when "0111" => 
+				hex7 <= "0001111";
+			when "1000" => 
+				hex7 <= "0000000";
+			when "1001" => 
+				hex7 <= "0001100";
+			when "1010" => 
+				hex7 <= "0001000";
+			when "1011" => 
+				hex7 <= "1100000";
+			when "1100" => 
+				hex7 <= "0110001";
+			when "1101" => 
+				hex7 <= "1000010";
+			when "1110" => 
+				hex7 <= "0110000";
+			when "1111" => 
+				hex7 <= "0111000";
+				when others => null;
+		end case;
+		
+	case bin(23 downto 20) is 
+			when "0000" => 
+				hex6 <= "0000001";
+			when "0001" => 
+				hex6 <= "1001111";
+			when "0010" => 
+				hex6 <= "0010010";
+			when "0011" =>
+				hex6 <= "0000110";
+			when "0100" => 
+				hex6 <= "1001100";
+			when "0101" => 
+				hex6 <= "0100100";
+			when "0110" => 
+				hex6 <= "0100000";
+			when "0111" => 
+				hex6 <= "0001111";
+			when "1000" => 
+				hex6 <= "0000000";
+			when "1001" => 
+				hex6 <= "0001100";
+			when "1010" => 
+				hex6 <= "0001000";
+			when "1011" => 
+				hex6 <= "1100000";
+			when "1100" => 
+				hex6 <= "0110001";
+			when "1101" => 
+				hex6 <= "1000010";
+			when "1110" => 
+				hex6 <= "0110000";
+			when "1111" => 
+				hex6 <= "0111000";
+				when others => null;
+		end case;
+		
+	case bin(19 downto 16) is 
+			when "0000" => 
+				hex5 <= "0000001";
+			when "0001" => 
+				hex5 <= "1001111";
+			when "0010" => 
+				hex5 <= "0010010";
+			when "0011" =>
+				hex5 <= "0000110";
+			when "0100" => 
+				hex5 <= "1001100";
+			when "0101" => 
+				hex5 <= "0100100";
+			when "0110" => 
+				hex5 <= "0100000";
+			when "0111" => 
+				hex5 <= "0001111";
+			when "1000" => 
+				hex5 <= "0000000";
+			when "1001" => 
+				hex5 <= "0001100";
+			when "1010" => 
+				hex5 <= "0001000";
+			when "1011" => 
+				hex5 <= "1100000";
+			when "1100" => 
+				hex5 <= "0110001";
+			when "1101" => 
+				hex5 <= "1000010";
+			when "1110" => 
+				hex5 <= "0110000";
+			when "1111" => 
+				hex5 <= "0111000";
+				when others => null;
+		end case;
+
+	case bin(15 downto 12) is
+		when "0000" => 
+				hex4 <= "0000001";
+			when "0001" => 
+				hex4 <= "1001111";
+			when "0010" => 
+				hex4 <= "0010010";
+			when "0011" =>
+				hex4 <= "0000110";
+			when "0100" => 
+				hex4 <= "1001100";
+			when "0101" => 
+				hex4 <= "0100100";
+			when "0110" => 
+				hex4 <= "0100000";
+			when "0111" => 
+				hex4 <= "0001111";
+			when "1000" => 
+				hex4 <= "0000000";
+			when "1001" => 
+				hex4 <= "0001100";
+			when "1010" => 
+				hex4 <= "0001000";
+			when "1011" => 
+				hex4 <= "1100000";
+			when "1100" => 
+				hex4 <= "0110001";
+			when "1101" => 
+				hex4 <= "1000010";
+			when "1110" => 
+				hex4 <= "0110000";
+			when "1111" => 
+				hex4 <= "0111000";
+				when others => null;
+	end case;
+	
+	case bin(11 downto 8) is 
+			when "0000" => 
+				hex3 <= "0000001";
+			when "0001" => 
+				hex3 <= "1001111";
+			when "0010" => 
+				hex3 <= "0010010";
+			when "0011" =>
+				hex3 <= "0000110";
+			when "0100" => 
+				hex3 <= "1001100";
+			when "0101" => 
+				hex3 <= "0100100";
+			when "0110" => 
+				hex3 <= "0100000";
+			when "0111" => 
+				hex3 <= "0001111";
+			when "1000" => 
+				hex3 <= "0000000";
+			when "1001" => 
+				hex3 <= "0001100";
+			when "1010" => 
+				hex3 <= "0001000";
+			when "1011" => 
+				hex3 <= "1100000";
+			when "1100" => 
+				hex3 <= "0110001";
+			when "1101" => 
+				hex3 <= "1000010";
+			when "1110" => 
+				hex3 <= "0110000";
+			when "1111" => 
+				hex3 <= "0111000";
+				when others => null;
+		end case;
+		
+	case bin(7 downto 4) is 
+			when "0000" => 
+				hex2 <= "0000001";
+			when "0001" => 
+				hex2 <= "1001111";
+			when "0010" => 
+				hex2 <= "0010010";
+			when "0011" =>
+				hex2 <= "0000110";
+			when "0100" => 
+				hex2 <= "1001100";
+			when "0101" => 
+				hex2 <= "0100100";
+			when "0110" => 
+				hex2 <= "0100000";
+			when "0111" => 
+				hex2 <= "0001111";
+			when "1000" => 
+				hex2 <= "0000000";
+			when "1001" => 
+				hex2 <= "0001100";
+			when "1010" => 
+				hex2 <= "0001000";
+			when "1011" => 
+				hex2 <= "1100000";
+			when "1100" => 
+				hex2 <= "0110001";
+			when "1101" => 
+				hex2 <= "1000010";
+			when "1110" => 
+				hex2 <= "0110000";
+			when "1111" => 
+				hex2 <= "0111000";
+				when others => null;
+		end case;
+		
+	case bin(3 downto 0) is 
+			when "0000" => 
+				hex1 <= "0000001";
+			when "0001" => 
+				hex1 <= "1001111";
+			when "0010" => 
+				hex1 <= "0010010";
+			when "0011" =>
+				hex1 <= "0000110";
+			when "0100" => 
+				hex1 <= "1001100";
+			when "0101" => 
+				hex1 <= "0100100";
+			when "0110" => 
+				hex1 <= "0100000";
+			when "0111" => 
+				hex1 <= "0001111";
+			when "1000" => 
+				hex1 <= "0000000";
+			when "1001" => 
+				hex1 <= "0001100";
+			when "1010" => 
+				hex1 <= "0001000";
+			when "1011" => 
+				hex1 <= "1100000";
+			when "1100" => 
+				hex1 <= "0110001";
+			when "1101" => 
+				hex1 <= "1000010";
+			when "1110" => 
+				hex1 <= "0110000";
+			when "1111" => 
+				hex1 <= "0111000";
+				when others => null;
+		end case;
+end process;
+
+end arch;

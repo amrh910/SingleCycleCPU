@@ -1,0 +1,82 @@
+C:/Users/Amr/Desktop/Amr/nmux.vhd {1 {vcom -work work -2002 -explicit -stats=none {C:\Users\Amr\Desktop\Amr\nmux.vhd}
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity nMux
+-- Compiling architecture arch of nMux
+
+} {} {}} C:/Users/Amr/Desktop/Amr/control.vhd {1 {vcom -work work -2002 -explicit -stats=none {C:\Users\Amr\Desktop\Amr\control.vhd}
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity control
+-- Compiling architecture arch of control
+
+} {} {}} C:/Users/Amr/Desktop/Amr/dataMem.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/Amr/Desktop/Amr/dataMem.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity dataMem
+-- Compiling architecture arch of dataMem
+
+} {} {}} C:/Users/Amr/Desktop/Amr/ALU.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/Amr/Desktop/Amr/ALU.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Loading package STD_LOGIC_UNSIGNED
+-- Compiling entity ALU
+-- Compiling architecture arch of ALU
+
+} {} {}} C:/Users/Amr/Desktop/Amr/mainMem.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/Amr/Desktop/Amr/mainMem.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity mainMem
+-- Compiling architecture arch of mainMem
+
+} {} {}} C:/Users/Amr/Desktop/Amr/instReg.vhd {1 {vcom -work work -2002 -explicit -stats=none {C:\Users\Amr\Desktop\Amr\instReg.vhd}
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity instReg
+-- Compiling architecture arch of instReg
+
+} {} {}} C:/Users/Amr/Desktop/Amr/main.vhd {1 {vcom -work work -2002 -explicit -stats=none {C:\Users\Amr\Desktop\Amr\main.vhd}
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Loading package components
+-- Compiling entity main
+-- Compiling architecture arch of main
+
+} {} {}} C:/Users/Amr/Desktop/Amr/components.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/Amr/Desktop/Amr/components.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling package components
+
+} {} {}} C:/Users/Amr/Desktop/Amr/add.vhd {1 {vcom -work work -2002 -explicit -stats=none {C:\Users\Amr\Desktop\Amr\add.vhd}
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Loading package STD_LOGIC_UNSIGNED
+-- Compiling entity adder
+-- Compiling architecture arch of adder
+
+} {} {}}

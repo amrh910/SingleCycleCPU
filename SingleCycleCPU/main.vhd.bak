@@ -1,0 +1,278 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.std_logic_arith.all;
+use ieee.std_logic_unsigned.all;
+
+entity main is
+	port(
+		Clk		: IN std_logic
+		hex8 		: OUT std_logic_vector(6 downto 0);
+		hex7 		: OUT std_logic_vector(6 downto 0);
+		hex6 		: OUT std_logic_vector(6 downto 0);
+		hex5 		: OUT std_logic_vector(6 downto 0);
+		hex4 		: OUT std_logic_vector(6 downto 0);
+		hex3 		: OUT std_logic_vector(6 downto 0);
+		hex2 		: OUT std_logic_vector(6 downto 0);
+		hex1 		: OUT std_logic_vector(6 downto 0)
+		--include inputs and outputs later
+		);
+end main;
+
+architecture arch of main is
+	signal instrAddr	 		: std_logic_vector(4 downto 0);
+	signal nexAddr				: std_logic_vector(4 downto 0);
+	signal instr 				: std_logic_vector(31 downto 0);
+	signal rdData1 				: std_logic_vector(31 downto 0) := (others => '0');
+	signal rdData2 				: std_logic_vector(31 downto 0) := (others => '0');
+	signal wrData 				: std_logic_vector(31 downto 0) := (others => '0');
+	signal extImmed 			: std_logic_vector(31 downto 0) := (others => '0');
+	signal shiftImm 			: std_logic_vector(31 downto 0) := (others => '0');
+	signal ALU_IN_2 			: std_logic_vector(31 downto 0) := (others => '0');
+	signal ALU_res 				: std_logic_vector(31 downto 0) := (others => '0');
+	signal prevInstr 			: std_logic_vector(31 downto 0) := (others => '0');
+	signal addrIncr 			: std_logic_vector(31 downto 0) := (others => '0');
+	signal sum 					: std_logic_vector(31 downto 0) := (others => '0');
+	signal muxRes				: std_logic_vector(31 downto 0) := (others => '0');
+	signal memRdData 			: std_logic_vector(31 downto 0) := (others => '0');
+	signal shiftJumpAddr 		: std_logic_vector(27 downto 0);
+	signal jAddr 				: std_logic_vector(25 downto 0);
+	signal imm 					: std_logic_vector(15 downto 0);
+	signal opCode 				: std_logic_vector(5 downto 0);
+	signal funct 				: std_logic_vector(5 downto 0);
+	signal rs 					: std_logic_vector(4 downto 0);
+	signal rt 					: std_logic_vector(4 downto 0);
+	signal rd 					: std_logic_vector(4 downto 0);
+	signal wrAddr 				: std_logic_vector(4 downto 0);
+	signal shAmpt 				: std_logic_vector(4 downto 0);
+	signal ALUCtrl 				: std_logic_vector(3 downto 0);
+	signal regDst 				: std_logic := '0'; 
+	signal jump 				: std_logic := '0';
+	signal branch 				: std_logic := '0';
+	signal memRd 				: std_logic := '0';
+	signal mem2Reg 				: std_logic := '0';
+	signal memWr 				: std_logic := '0';
+	signal ALUsrc 				: std_logic := '0'; 
+	signal regWr 				: std_logic := '0';
+	signal ALUz 				: std_logic := '0';
+	signal branchALUz 			: std_logic := '0';
+	signal ALUop 				: std_logic_vector(1 downto 0);
+
+	type state is (loading, running, done);
+	signal s 					: state := loading;
+	signal en 					: std_logic := '0';
+	
+
+	component pc
+		port(
+		clk 		: IN std_logic;
+		addr 		: IN std_logic_vector(4 downto 0);
+		CurrAdd 	: OUT std_logic_vector(4 downto 0)
+		);
+	end component;
+	component dataMem
+		port(
+		clk 		: IN std_logic;
+		wrEn 		: IN std_logic;
+		wrAddr 		: IN std_logic_vector(4 downto 0);
+		rdAddrA 	: IN std_logic_vector(4 downto 0);
+		rdAddrB 	: IN std_logic_vector(4 downto 0);
+		wrData 		: IN std_logic_vector(31 downto 0);
+		rdDataA 	: OUT std_logic_vector(31 downto 0);
+		rdDataB 	: OUT std_logic_vector(31 downto 0)
+		);
+	end component;
+	component control
+		port(
+		opCode 		: IN std_logic_vector(5 downto 0);
+		ALUop 		: OUT std_logic_vector(1 downto 0);
+		ALUsrc		: OUT std_logic;
+		RegDst 		: OUT std_logic;
+		RegWr			: OUT std_logic;
+		jump 			: OUT std_logic;
+		branch 		: OUT std_logic;
+		MemRd 		: OUT std_logic;
+		MemWr 		: OUT std_logic;
+		Mem2Reg 	: OUT std_logic
+		);
+	end component;
+	component mux
+		GENERIC (n: natural := 1);
+		PORT(
+		A		: IN STD_LOGIC_VECTOR (n DOWNTO 0);
+		B		: IN STD_LOGIC_VECTOR (n DOWNTO 0);
+		sel			: IN STD_LOGIC ;
+		pout		: OUT STD_LOGIC_VECTOR (n DOWNTO 0)
+		);
+	end component;
+	component ALUCtr
+		port(
+		funct 	: IN std_logic_vector(5 downto 0);
+		ALUop 	: IN std_logic_vector(1 downto 0);
+		ALUCtr 	: OUT std_logic_vector(3 downto 0)
+		);
+	end component;
+	component signExt
+		port(
+		A 		: IN std_logic_vector(15 downto 0);
+		aExt 	: OUT std_logic_vector(31 downto 0)
+		);
+	end component;
+	component ALU 
+		port(
+		A 		: IN std_logic_vector(31 downto 0);
+		B 		: IN std_logic_vector(31 downto 0);
+		ALUctr 	: IN std_logic_vector(3 downto 0);
+		D 		: OUT std_logic_vector(31 downto 0);
+		zero 	: OUT std_logic
+		);
+	end component;
+	component shift
+	 	generic (n1: natural:= 32; n2: natural:= 32; k: natural:= 2);
+		port(
+		A 	: IN std_logic_vector(n1-1 downto 0);
+		B 	: OUT std_logic_vector(n2-1 downto 0)
+		);
+	end component;
+	component add 
+		port(
+		A 		: IN std_logic_vector(31 downto 0);
+		B 		: IN std_logic_vector(31 downto 0);
+		C 		: OUT std_logic_vector(31 downto 0)
+		);
+	end component;
+	component memory
+		port(
+		clk 		: IN std_logic;
+		addr 		: IN std_logic_vector(31 downto 0);
+		data 		: IN std_logic_vector(31 downto 0);
+		memWr 		: IN std_logic;
+		memRd 		: IN std_logic;
+		q			: OUT std_logic_vector(31 downto 0)
+		);
+	end component;
+	component instReg
+		port(
+			rdAdd	 	: IN std_logic_vector(4 downto 0);
+			inst 		: OUT std_logic_vector(31 downto 0);
+			prevInst	: OUT std_logic_vector(31 downto 0)
+			);
+	end component;
+
+	begin
+		process(Clk)
+			begin
+				case s is
+					when running =>
+						en <= Clk;
+					when others =>
+						en <= '0';
+				end case;
+
+				if rising_edge(Clk) then
+					case s is 
+						when loading =>
+							s <= running;
+						when running =>
+							if instrAddr > prevInstr then
+								s <= done;
+								en <= '0';
+							end if;
+						when others =>
+							null;
+					end case;
+				end if;
+		end process;
+
+		opCode 	<= instr(31 downto 26);
+		rs 		<= instr(25 downto 21);
+		rt 		<= instr(20 downto 16);
+		rd 		<= instr(15 downto 11);
+		shAmpt 	<= instr(10 downto 6);
+		funct 	<= instr(5 downto 0);
+		imm 	<= instr(15 downto 0);
+		jAddr 	<= instr(25 downto 0);
+
+	ProgCount	: 	PC port 		map(en, nexAddr, instrAddr);
+	InstMem 	: 	instReg port 	map(instrAddr, instr, prevInstr);
+
+	Control1 	: 	control port 	map(
+										opcode 	=> opCode,
+										ALUop 	=> ALUop,
+										ALUsrc 	=> ALUsrc,
+										RegDst 	=> RegDst,
+										RegWr 	=> RegWr,
+										jump 	=> jump,
+										branch 	=> branch,
+										MemRd 	=> MemRd,
+										MemWr 	=> MemWr,
+										Mem2Reg => Mem2Reg
+										);
+
+	MUX1 		: 	mux generic 	map(5) 
+							port	map(a => rt, b => rs, sel => regDst, pout => wrAddr);
+
+	REGMEM		:	dataMem port 	map(
+										clk 	=> en,
+										wrEn 	=> regWr,
+										wrAddr 	=> wrAddr,
+										rdAddrA => rs, 
+										rdAddrB => rt,
+										wrData 	=> wrData,
+										rdDataA => rdData1,
+										rdDataB => rdData2
+										);
+
+	ALUCont		: 	ALUCtr port 	map(funct, ALUop, ALUCtrl);
+
+	SIGNEXTEND 	: 	signExt port 	map(imm, extImmed);
+
+	MUX2 		: 	mux generic 	map(32)
+							port	map(a  => rdData2, b => extImmed, sel => ALUsrc, pout => ALU_IN_2);
+
+	ALU1 		: 	ALU 	port 	map(rdData1, rdData2, ALUCtrl, ALU_res, ALUz);
+
+	MUX3 		: 	mux generic 	map(32)
+							port 	map(a  => ALU_res, b => memRdData, sel => mem2Reg, pout => wrData);
+
+	SHIFT1 		:	shift 	port 	map(a => extImmed, b => shiftImm);
+
+	ADD1 		: 	add 	port 	map(a => instrAddr, b => "00000000000000000000000000000100", c => addrIncr);
+
+	branchALUz <= branch and ALUz;
+	MUX4 		:	mux generic 	map(32)
+							port	map(a  => addrIncr , b => sum, sel => branchALUz, pout => muxRes);
+
+	ADD2 		:	add 	port 	map(a => addrIncr ,  b => shiftImm , c => sum);
+
+	SHIFT2		:	shift generic 	map(n1 => 26, n2 => 28)
+							port 	map(a => jAddr, b => shiftJumpAddr);
+
+
+	MEM 		: 	memory 	port 	map(
+									clk 	=> en,
+									addr 	=> ALU_res,
+									data 	=> rdData2,
+									memWr 	=> memWr,
+									memRd 	=> memRd,
+									q 		=> memRdData
+									);
+
+	component hexConvert
+	port(
+		bin 		: IN std_logic_vector(31 downto 0);
+		hex8 		: OUT std_logic_vector(6 downto 0);
+		hex7 		: OUT std_logic_vector(6 downto 0);
+		hex6 		: OUT std_logic_vector(6 downto 0);
+		hex5 		: OUT std_logic_vector(6 downto 0);
+		hex4 		: OUT std_logic_vector(6 downto 0);
+		hex3 		: OUT std_logic_vector(6 downto 0);
+		hex2 		: OUT std_logic_vector(6 downto 0);
+		hex1 		: OUT std_logic_vector(6 downto 0)
+		);
+end component;
+
+HEX 	: hexConvert port map(memRdData, hex8, hex7, hex6, hex5, hex4, hex3, hex2, hex1);
+
+
+
+end arch;

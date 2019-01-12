@@ -1,0 +1,482 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/Users/Amr/Desktop/Ucha
+Eadder
+Z0 w1512995604
+Z1 DPx4 ieee 15 std_logic_arith 0 22 [G314=:2zXJ`VORJe1J@Z1
+Z2 DPx4 ieee 18 std_logic_unsigned 0 22 ;eZjO2D4ZDz<]0>8AL<ne1
+Z3 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z4 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+Z5 dC:/Users/Amr/Desktop/Amr
+Z6 8C:\Users\Amr\Desktop\Amr\add.vhd
+Z7 FC:\Users\Amr\Desktop\Amr\add.vhd
+l0
+L5
+VF?XK6O]I_e8jCjQGRRI9o2
+!s100 U@PNj@9bj_O_?ARoKJz>K3
+Z8 OV;C;10.5b;63
+32
+Z9 !s110 1513003663
+!i10b 1
+Z10 !s108 1513003663.000000
+Z11 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:\Users\Amr\Desktop\Amr\add.vhd|
+Z12 !s107 C:\Users\Amr\Desktop\Amr\add.vhd|
+!i113 1
+Z13 o-work work -2002 -explicit
+Z14 tExplicit 1 CvgOpt 0
+Aarch
+R1
+R2
+R3
+R4
+DEx4 work 5 adder 0 22 F?XK6O]I_e8jCjQGRRI9o2
+l13
+L12
+VPj8o`lTn]UeN>@mUfKdOo0
+!s100 XfQAn<_AYchAo=QQ@AQ;e1
+R8
+32
+R9
+!i10b 1
+R10
+R11
+R12
+!i113 1
+R13
+R14
+Ealu
+Z15 w1513003660
+R1
+R2
+R3
+R4
+R5
+Z16 8C:/Users/Amr/Desktop/Amr/ALU.vhd
+Z17 FC:/Users/Amr/Desktop/Amr/ALU.vhd
+l0
+L5
+VX0WMj0Nz[6Olknz58YK>`0
+!s100 ihWiVJ3C=LX<FSWHE;IPL2
+R8
+32
+Z18 !s110 1513003664
+!i10b 1
+Z19 !s108 1513003664.000000
+Z20 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Amr/Desktop/Amr/ALU.vhd|
+Z21 !s107 C:/Users/Amr/Desktop/Amr/ALU.vhd|
+!i113 1
+R13
+R14
+Aarch
+R1
+R2
+R3
+R4
+DEx4 work 3 alu 0 22 X0WMj0Nz[6Olknz58YK>`0
+l18
+L16
+VFTI5J[:B;0c93@5[D7U1_3
+!s100 2k3Ch93bNOoT>JM=olnZ[0
+R8
+32
+R18
+!i10b 1
+R19
+R20
+R21
+!i113 1
+R13
+R14
+Ealuctr
+Z22 w1512995700
+R3
+R4
+R5
+Z23 8C:\Users\Amr\Desktop\Amr\ALUctr.vhd
+Z24 FC:\Users\Amr\Desktop\Amr\ALUctr.vhd
+l0
+L4
+VD2Y5hWod_XAF7zU]n32m43
+!s100 P3F=5<JTk8K8T79:5AZ[g1
+R8
+32
+R18
+!i10b 1
+R19
+Z25 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:\Users\Amr\Desktop\Amr\ALUctr.vhd|
+Z26 !s107 C:\Users\Amr\Desktop\Amr\ALUctr.vhd|
+!i113 1
+R13
+R14
+Aarch
+R3
+R4
+DEx4 work 6 aluctr 0 22 D2Y5hWod_XAF7zU]n32m43
+l13
+L12
+VGYS@DMk=AC1]`nONKm?bI0
+!s100 HYjK2Vn2?;WWV1C=9z:D]1
+R8
+32
+R18
+!i10b 1
+R19
+R25
+R26
+!i113 1
+R13
+R14
+Pcomponents
+R3
+R4
+w1513000884
+R5
+8C:/Users/Amr/Desktop/Amr/components.vhd
+FC:/Users/Amr/Desktop/Amr/components.vhd
+l0
+L4
+VXOni4AEaBZ9EX8i=NV^610
+!s100 8VjT<gFIQbD5YH3ha<J=40
+R8
+32
+R18
+!i10b 1
+R19
+!s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Amr/Desktop/Amr/components.vhd|
+!s107 C:/Users/Amr/Desktop/Amr/components.vhd|
+!i113 1
+R13
+R14
+Econtrol
+Z27 w1513001902
+R3
+R4
+R5
+Z28 8C:\Users\Amr\Desktop\Amr\control.vhd
+Z29 FC:\Users\Amr\Desktop\Amr\control.vhd
+l0
+L4
+V@?ZYMG[<bSVc8]emT6USO3
+!s100 ^feMj22Yn25nM]R]8`YFE0
+R8
+32
+R18
+!i10b 1
+R19
+Z30 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:\Users\Amr\Desktop\Amr\control.vhd|
+Z31 !s107 C:\Users\Amr\Desktop\Amr\control.vhd|
+!i113 1
+R13
+R14
+Aarch
+R3
+R4
+DEx4 work 7 control 0 22 @?ZYMG[<bSVc8]emT6USO3
+l24
+L23
+V6==VeXnd33?9=I?on[n1m0
+!s100 T:MFa@VPJZl9IP2H>QH]D0
+R8
+32
+R18
+!i10b 1
+R19
+R30
+R31
+!i113 1
+R13
+R14
+Edatamem
+Z32 w1513000731
+Z33 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
+R3
+R4
+R5
+Z34 8C:/Users/Amr/Desktop/Amr/dataMem.vhd
+Z35 FC:/Users/Amr/Desktop/Amr/dataMem.vhd
+l0
+L5
+VIi1l[^5Y?OJ?>ze7AOM]72
+!s100 3cC[d=6gESQS?5ZVLm?6B0
+R8
+32
+R18
+!i10b 1
+R19
+Z36 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Amr/Desktop/Amr/dataMem.vhd|
+Z37 !s107 C:/Users/Amr/Desktop/Amr/dataMem.vhd|
+!i113 1
+R13
+R14
+Aarch
+R33
+R3
+R4
+DEx4 work 7 datamem 0 22 Ii1l[^5Y?OJ?>ze7AOM]72
+l20
+L16
+VGi99_lGn2P@iFd_hBnEoF1
+!s100 NQk`]PKoJR?8DI:zGQlHi2
+R8
+32
+R18
+!i10b 1
+R19
+R36
+R37
+!i113 1
+R13
+R14
+Einstreg
+Z38 w1512998829
+R33
+R3
+R4
+R5
+Z39 8C:\Users\Amr\Desktop\Amr\instReg.vhd
+Z40 FC:\Users\Amr\Desktop\Amr\instReg.vhd
+l0
+L5
+VSoU2LbhEQPZW:9JGk38No3
+!s100 Y?jbc@`@6RiY[DYM^k5ad2
+R8
+32
+R18
+!i10b 1
+R19
+Z41 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:\Users\Amr\Desktop\Amr\instReg.vhd|
+Z42 !s107 C:\Users\Amr\Desktop\Amr\instReg.vhd|
+!i113 1
+R13
+R14
+Aarch
+R33
+R3
+R4
+DEx4 work 7 instreg 0 22 SoU2LbhEQPZW:9JGk38No3
+l16
+L12
+VbQoNBVEH?QG?3:kl[EU_V2
+!s100 bb]PmLe^;Aj`Dbf]WWJJz2
+R8
+32
+R18
+!i10b 1
+R19
+R41
+R42
+!i113 1
+R13
+R14
+Emain
+Z43 w1513002721
+Z44 DPx4 work 10 components 0 22 XOni4AEaBZ9EX8i=NV^610
+R33
+R3
+R4
+R5
+Z45 8C:\Users\Amr\Desktop\Amr\main.vhd
+Z46 FC:\Users\Amr\Desktop\Amr\main.vhd
+l0
+L6
+V3lmA;f4gQER4AmU1OlVO61
+!s100 i9BR6Vbj7cbG1o7ZlUWi13
+R8
+32
+R18
+!i10b 1
+R19
+Z47 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:\Users\Amr\Desktop\Amr\main.vhd|
+Z48 !s107 C:\Users\Amr\Desktop\Amr\main.vhd|
+!i113 1
+R13
+R14
+Aarch
+R44
+R33
+R3
+R4
+DEx4 work 4 main 0 22 3lmA;f4gQER4AmU1OlVO61
+l40
+L21
+Vj6FIR84ggCP@1Z9ECNj9Q1
+!s100 oNUToE8VlmJ^RzoIl32:`2
+R8
+32
+R18
+!i10b 1
+R19
+R47
+R48
+!i113 1
+R13
+R14
+Emainmem
+Z49 w1512999047
+R33
+R3
+R4
+R5
+Z50 8C:/Users/Amr/Desktop/Amr/mainMem.vhd
+Z51 FC:/Users/Amr/Desktop/Amr/mainMem.vhd
+l0
+L5
+Vl67abKjjBkWgAX5dBXzI>0
+!s100 a1fNlNX[CFP[b?5AnE2Q?1
+R8
+32
+Z52 !s110 1513003665
+!i10b 1
+Z53 !s108 1513003665.000000
+Z54 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Amr/Desktop/Amr/mainMem.vhd|
+Z55 !s107 C:/Users/Amr/Desktop/Amr/mainMem.vhd|
+!i113 1
+R13
+R14
+Aarch
+R33
+R3
+R4
+DEx4 work 7 mainmem 0 22 l67abKjjBkWgAX5dBXzI>0
+l22
+L18
+VW<IDnke26P:aFhG6F]k<50
+!s100 ;2cbb;ZTZW_8`IO^PAiBe3
+R8
+32
+R52
+!i10b 1
+R53
+R54
+R55
+!i113 1
+R13
+R14
+Enmux
+Z56 w1512995372
+R33
+R3
+R4
+R5
+Z57 8C:\Users\Amr\Desktop\Amr\nmux.vhd
+Z58 FC:\Users\Amr\Desktop\Amr\nmux.vhd
+l0
+L5
+VD4a9zK0DZ<e:I5zda9@752
+!s100 iOO[TADjGU?hJj7<oPgn>2
+R8
+32
+R52
+!i10b 1
+R53
+Z59 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:\Users\Amr\Desktop\Amr\nmux.vhd|
+Z60 !s107 C:\Users\Amr\Desktop\Amr\nmux.vhd|
+!i113 1
+R13
+R14
+Aarch
+R33
+R3
+R4
+Z61 DEx4 work 4 nmux 0 22 D4a9zK0DZ<e:I5zda9@752
+l17
+L16
+Z62 VXkiI@o:W]T=U9QRHh1i]G2
+Z63 !s100 G>10U]AQI;A^E797MaMW<2
+R8
+32
+R52
+!i10b 1
+R53
+R59
+R60
+!i113 1
+R13
+R14
+Epc
+Z64 w1512993046
+R3
+R4
+R5
+Z65 8C:/Users/Amr/Desktop/Amr/pc.vhd
+Z66 FC:/Users/Amr/Desktop/Amr/pc.vhd
+l0
+L4
+VL4SK9>75<k2^NlV:Xd`FX2
+!s100 3@:b39[^;@nP^;fXR3U?a2
+R8
+32
+Z67 !s110 1512997439
+!i10b 1
+Z68 !s108 1512997439.000000
+Z69 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Amr/Desktop/Amr/pc.vhd|
+Z70 !s107 C:/Users/Amr/Desktop/Amr/pc.vhd|
+!i113 1
+R13
+R14
+Aarch
+R3
+R4
+DEx4 work 2 pc 0 22 L4SK9>75<k2^NlV:Xd`FX2
+l12
+L11
+VIJ;zLTTe1;Em7:a5;eGe03
+!s100 2Gj:cHUc?DSVWO<0>6a=C1
+R8
+32
+R67
+!i10b 1
+R68
+R69
+R70
+!i113 1
+R13
+R14
+Esignext
+Z71 w1512997429
+R33
+R3
+R4
+R5
+Z72 8C:\Users\Amr\Desktop\Amr\signExt.vhd
+Z73 FC:\Users\Amr\Desktop\Amr\signExt.vhd
+l0
+L5
+VY::jQfQXMF?bA:cNSQ=541
+!s100 Eenj`HZZ^Xh;N1OFUMGhX3
+R8
+32
+R9
+!i10b 1
+R10
+Z74 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:\Users\Amr\Desktop\Amr\signExt.vhd|
+Z75 !s107 C:\Users\Amr\Desktop\Amr\signExt.vhd|
+!i113 1
+R13
+R14
+Aarch
+R33
+R3
+R4
+DEx4 work 7 signext 0 22 Y::jQfQXMF?bA:cNSQ=541
+l16
+L12
+Vccnj>jj[accZ7I5hn?Bi:3
+!s100 kbBBlnBU9kfAK3ZJWGKO_2
+R8
+32
+R9
+!i10b 1
+R10
+R74
+R75
+!i113 1
+R13
+R14

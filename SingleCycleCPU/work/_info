@@ -1,0 +1,551 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/intelFPGA/17.0
+Eadd
+Z0 w1512705287
+Z1 DPx4 ieee 18 std_logic_unsigned 0 22 ;eZjO2D4ZDz<]0>8AL<ne1
+Z2 DPx4 ieee 15 std_logic_arith 0 22 [G314=:2zXJ`VORJe1J@Z1
+Z3 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z4 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+Z5 dC:/Users/Amr/Desktop/SingleCycleCPU
+Z6 8C:/Users/Amr/Desktop/SingleCycleCPU/add.vhd
+Z7 FC:/Users/Amr/Desktop/SingleCycleCPU/add.vhd
+l0
+L6
+VDzR_h3;WXCL8B=BHJMQS?1
+!s100 e0[zM]XVcC;f20b]bIKM;2
+Z8 OV;C;10.5b;63
+32
+Z9 !s110 1512812711
+!i10b 1
+Z10 !s108 1512812711.000000
+Z11 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Amr/Desktop/SingleCycleCPU/add.vhd|
+Z12 !s107 C:/Users/Amr/Desktop/SingleCycleCPU/add.vhd|
+!i113 1
+Z13 o-work work -2002 -explicit
+Z14 tExplicit 1 CvgOpt 0
+Aarch
+R1
+R2
+R3
+R4
+DEx4 work 3 add 0 22 DzR_h3;WXCL8B=BHJMQS?1
+l15
+L14
+V8<Nne@;mfik53RP:Vd^GA3
+!s100 O2b>:7PMdP`1HmQP3jZiT1
+R8
+32
+R9
+!i10b 1
+R10
+R11
+R12
+!i113 1
+R13
+R14
+Ealu
+Z15 w1512812999
+R2
+R1
+R3
+R4
+R5
+Z16 8C:/Users/Amr/Desktop/SingleCycleCPU/ALU.vhd
+Z17 FC:/Users/Amr/Desktop/SingleCycleCPU/ALU.vhd
+l0
+L7
+V`@Nbl3_ZHlR219Y:VH@kR2
+!s100 3nND>az7UPzfDalfQ:?WT3
+R8
+32
+Z18 !s110 1512813004
+!i10b 1
+Z19 !s108 1512813004.000000
+Z20 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Amr/Desktop/SingleCycleCPU/ALU.vhd|
+Z21 !s107 C:/Users/Amr/Desktop/SingleCycleCPU/ALU.vhd|
+!i113 1
+R13
+R14
+Abehavior
+R2
+R1
+R3
+R4
+DEx4 work 3 alu 0 22 `@Nbl3_ZHlR219Y:VH@kR2
+l36
+L32
+VN<:E8L8cS;^3PkWI479Hm2
+!s100 zFc`c4ZBD]@1QA2XH6W6d2
+R8
+32
+R18
+!i10b 1
+R19
+R20
+R21
+!i113 1
+R13
+R14
+Ealuctr
+Z22 w1512802304
+Z23 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
+R3
+R4
+R5
+Z24 8C:/Users/Amr/Desktop/SingleCycleCPU/ALUCtrl.vhd
+Z25 FC:/Users/Amr/Desktop/SingleCycleCPU/ALUCtrl.vhd
+l0
+L5
+Vh0021Q8BILUR<>5K`0ncM1
+!s100 =Qb8YjoH]nMUEz;g@R2hb0
+R8
+32
+Z26 !s110 1512812712
+!i10b 1
+Z27 !s108 1512812712.000000
+Z28 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Amr/Desktop/SingleCycleCPU/ALUCtrl.vhd|
+Z29 !s107 C:/Users/Amr/Desktop/SingleCycleCPU/ALUCtrl.vhd|
+!i113 1
+R13
+R14
+Aarch
+R23
+R3
+R4
+DEx4 work 6 aluctr 0 22 h0021Q8BILUR<>5K`0ncM1
+l14
+L13
+VKZ4h4XIjkagdITOdQA:3m1
+!s100 33Jm<Nn@BViKTkLO>F>3n3
+R8
+32
+R26
+!i10b 1
+R27
+R28
+R29
+!i113 1
+R13
+R14
+Econtrol
+Z30 w1512811938
+R23
+R3
+R4
+R5
+Z31 8C:/Users/Amr/Desktop/SingleCycleCPU/Control.vhd
+Z32 FC:/Users/Amr/Desktop/SingleCycleCPU/Control.vhd
+l0
+L5
+VYQ7gMNZam>_Y3:eVfXWV71
+!s100 1Kd`RK1AX^Y?Jg3TKhS^X0
+R8
+32
+R26
+!i10b 1
+R27
+Z33 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Amr/Desktop/SingleCycleCPU/Control.vhd|
+Z34 !s107 C:/Users/Amr/Desktop/SingleCycleCPU/Control.vhd|
+!i113 1
+R13
+R14
+Abehav
+R23
+R3
+R4
+DEx4 work 7 control 0 22 YQ7gMNZam>_Y3:eVfXWV71
+l21
+L20
+Vm8VjnooE9k]Tj76DbCc581
+!s100 QjfkAmoo86[WA<`7ZE>2k2
+R8
+32
+R26
+!i10b 1
+R27
+R33
+R34
+!i113 1
+R13
+R14
+Edatamem
+Z35 w1512946551
+R23
+R3
+R4
+R5
+Z36 8C:\Users\Amr\Desktop\SingleCycleCPU\dataMem.vhd
+Z37 FC:\Users\Amr\Desktop\SingleCycleCPU\dataMem.vhd
+l0
+L5
+VT3=EMDLYGSI?V3enb]L362
+!s100 VMLdgNfnA33XIe01Lego13
+R8
+32
+Z38 !s110 1512946563
+!i10b 1
+Z39 !s108 1512946563.000000
+Z40 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:\Users\Amr\Desktop\SingleCycleCPU\dataMem.vhd|
+Z41 !s107 C:\Users\Amr\Desktop\SingleCycleCPU\dataMem.vhd|
+!i113 1
+R13
+R14
+Abehav
+R23
+R3
+R4
+Z42 DEx4 work 7 datamem 0 22 T3=EMDLYGSI?V3enb]L362
+l32
+L18
+Vzch`mWmk<YP8EBkfe?PKc1
+!s100 m1`>k<MW1h46PD7>JRTnY1
+R8
+32
+R38
+!i10b 1
+R39
+R40
+R41
+!i113 1
+R13
+R14
+Einstreg
+Z43 w1512944900
+R23
+R3
+R4
+R5
+Z44 8C:/Users/Amr/Desktop/SingleCycleCPU/instReg.vhd
+Z45 FC:/Users/Amr/Desktop/SingleCycleCPU/instReg.vhd
+l0
+L6
+VMld4e[oCzLSR[Y81L@@n91
+!s100 72F9S4NdT:AO9Wez1]EfD2
+R8
+32
+Z46 !s110 1512944917
+!i10b 1
+Z47 !s108 1512944917.000000
+Z48 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Amr/Desktop/SingleCycleCPU/instReg.vhd|
+Z49 !s107 C:/Users/Amr/Desktop/SingleCycleCPU/instReg.vhd|
+!i113 1
+R13
+R14
+Abehav
+R23
+R3
+R4
+DEx4 work 7 instreg 0 22 Mld4e[oCzLSR[Y81L@@n91
+l54
+L13
+V5WII0b:L?bI^RS5g8jHa>3
+!s100 g?l=V<4afAjz@H[B;_Z;[1
+R8
+32
+R46
+!i10b 1
+R47
+R48
+R49
+!i113 1
+R13
+R14
+Emain
+Z50 w1512813564
+R1
+R2
+R3
+R4
+R5
+Z51 8C:\Users\Amr\Desktop\SingleCycleCPU\main.vhd
+Z52 FC:\Users\Amr\Desktop\SingleCycleCPU\main.vhd
+l0
+L6
+V_1OYGT8janb^X^YX3z;P61
+!s100 D_5P1A;1h5N`KPG0QR2`[2
+R8
+32
+Z53 !s110 1512813567
+!i10b 1
+Z54 !s108 1512813567.000000
+Z55 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:\Users\Amr\Desktop\SingleCycleCPU\main.vhd|
+Z56 !s107 C:\Users\Amr\Desktop\SingleCycleCPU\main.vhd|
+!i113 1
+R13
+R14
+Aarch
+R1
+R2
+R3
+R4
+DEx4 work 4 main 0 22 _1OYGT8janb^X^YX3z;P61
+l154
+L13
+VgE;EmGiS_8U]Cz8d2B?0Z3
+!s100 [:F189PWLhJf^cYB:LCeM2
+R8
+32
+R53
+!i10b 1
+R54
+R55
+R56
+!i113 1
+R13
+R14
+Ememory
+Z57 w1512796160
+R1
+R2
+R3
+R4
+R5
+Z58 8C:/Users/Amr/Desktop/SingleCycleCPU/memory.vhd
+Z59 FC:/Users/Amr/Desktop/SingleCycleCPU/memory.vhd
+l0
+L6
+V0lJQ4Pk[W;FWZDX8F_^1k1
+!s100 kW<WnYZ?ibL@?5]icVYPV2
+R8
+32
+Z60 !s110 1512812713
+!i10b 1
+Z61 !s108 1512812713.000000
+Z62 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Amr/Desktop/SingleCycleCPU/memory.vhd|
+Z63 !s107 C:/Users/Amr/Desktop/SingleCycleCPU/memory.vhd|
+!i113 1
+R13
+R14
+Abehav
+R1
+R2
+R3
+R4
+DEx4 work 6 memory 0 22 0lJQ4Pk[W;FWZDX8F_^1k1
+l30
+L17
+VD]flGcC3MC`CA^mE^N5QC2
+!s100 Vad0=i=cVCUT^E;1K>eg_2
+R8
+32
+R60
+!i10b 1
+R61
+R62
+R63
+!i113 1
+R13
+R14
+Emux
+Z64 w1512802463
+R23
+R3
+R4
+R5
+Z65 8C:/Users/Amr/Desktop/SingleCycleCPU/mux.vhd
+Z66 FC:/Users/Amr/Desktop/SingleCycleCPU/mux.vhd
+l0
+L5
+V6VO<<gm0Y3okCVd@>eD7U2
+!s100 S=5QQ^_zZY9Si2W7]c9lP0
+R8
+32
+R60
+!i10b 1
+R61
+Z67 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Amr/Desktop/SingleCycleCPU/mux.vhd|
+Z68 !s107 C:/Users/Amr/Desktop/SingleCycleCPU/mux.vhd|
+!i113 1
+R13
+R14
+Aarch
+R23
+R3
+R4
+DEx4 work 3 mux 0 22 6VO<<gm0Y3okCVd@>eD7U2
+l16
+L15
+VX`DHB1oKkJH=c]WYNACTH3
+!s100 [@S?[1jF=?:RhE3XNdYKO3
+R8
+32
+R60
+!i10b 1
+R61
+R67
+R68
+!i113 1
+R13
+R14
+Epc
+Z69 w1512943730
+R2
+R1
+R3
+R4
+R5
+Z70 8C:/Users/Amr/Desktop/SingleCycleCPU/pc.vhd
+Z71 FC:/Users/Amr/Desktop/SingleCycleCPU/pc.vhd
+l0
+L5
+VKO8Zgjc<]SLZ61:^f@<BT1
+!s100 <A;8l`OZgO;LZL9GbLD3<3
+R8
+32
+!s110 1512944321
+!i10b 1
+!s108 1512944320.000000
+Z72 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Amr/Desktop/SingleCycleCPU/pc.vhd|
+Z73 !s107 C:/Users/Amr/Desktop/SingleCycleCPU/pc.vhd|
+!i113 1
+R13
+R14
+Abehav
+R2
+R1
+R3
+R4
+DEx4 work 2 pc 0 22 H^7ll9=7zR5PjXF;jBV6B0
+l17
+L13
+VL>cN:AdQc>N^eFKVb:_P_0
+!s100 Rm12JWXl9=Ni7ejZ@Q3dR2
+R8
+32
+R60
+!i10b 1
+R61
+R72
+R73
+!i113 1
+R13
+R14
+Eshift
+Z74 w1512802292
+R23
+R3
+R4
+R5
+Z75 8C:/Users/Amr/Desktop/SingleCycleCPU/shift.vhd
+Z76 FC:/Users/Amr/Desktop/SingleCycleCPU/shift.vhd
+l0
+L5
+V=DA_jk=P4DU[D@D0:4h2m1
+!s100 `W>06]EiKOHf3Q]NAdk:z1
+R8
+32
+Z77 !s110 1512812714
+!i10b 1
+R61
+Z78 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Amr/Desktop/SingleCycleCPU/shift.vhd|
+Z79 !s107 C:/Users/Amr/Desktop/SingleCycleCPU/shift.vhd|
+!i113 1
+R13
+R14
+Aarch
+R23
+R3
+R4
+DEx4 work 5 shift 0 22 =DA_jk=P4DU[D@D0:4h2m1
+l16
+L13
+V_lJ;0]HM^VjnKG3X_Yjoi1
+!s100 dXcR`@FBEIJ]JS486zo`13
+R8
+32
+R77
+!i10b 1
+R61
+R78
+R79
+!i113 1
+R13
+R14
+Esignext
+Z80 w1512706137
+R3
+R4
+R5
+Z81 8C:/Users/Amr/Desktop/SingleCycleCPU/signExt.vhd
+Z82 FC:/Users/Amr/Desktop/SingleCycleCPU/signExt.vhd
+l0
+L4
+V]@QKM>H?LCQb>UQ`=D@Fg0
+!s100 jJz[AW8afEj;cOXk5@OTa1
+R8
+32
+R77
+!i10b 1
+Z83 !s108 1512812714.000000
+Z84 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Amr/Desktop/SingleCycleCPU/signExt.vhd|
+Z85 !s107 C:/Users/Amr/Desktop/SingleCycleCPU/signExt.vhd|
+!i113 1
+R13
+R14
+Aarch
+R3
+R4
+DEx4 work 7 signext 0 22 ]@QKM>H?LCQb>UQ`=D@Fg0
+l12
+L11
+VOChcT[?icMlJG[Z:Ha3BL1
+!s100 MZzV3G;TdER4UQY:e0Ien3
+R8
+32
+R77
+!i10b 1
+R83
+R84
+R85
+!i113 1
+R13
+R14
+Esram3port
+Z86 w1512708313
+R23
+R3
+R4
+R5
+Z87 8C:/Users/Amr/Desktop/SingleCycleCPU/mainComp.vhd
+Z88 FC:/Users/Amr/Desktop/SingleCycleCPU/mainComp.vhd
+l0
+L5
+V>mWhKDN^>9>f@k00;4:Ll3
+!s100 FA9>=5oTISYCHXL5mPP5_2
+R8
+32
+Z89 !s110 1512811489
+!i10b 1
+Z90 !s108 1512811489.000000
+Z91 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Amr/Desktop/SingleCycleCPU/mainComp.vhd|
+Z92 !s107 C:/Users/Amr/Desktop/SingleCycleCPU/mainComp.vhd|
+!i113 1
+R13
+R14
+Asyn
+R23
+R3
+R4
+DEx4 work 9 sram3port 0 22 >mWhKDN^>9>f@k00;4:Ll3
+l31
+L18
+V@kJl[2z:^X_UHJcOiSnk<3
+!s100 ^dTnbC4AW1Y=7ngcKmg9K2
+R8
+32
+R89
+!i10b 1
+R90
+R91
+R92
+!i113 1
+R13
+R14

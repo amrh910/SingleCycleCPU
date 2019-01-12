@@ -1,0 +1,23 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+
+
+entity instReg is 
+	port(
+		rdAdd	 	: IN std_logic_vector(4 downto 0);
+		inst 		: OUT std_logic_vector(31 downto 0)
+		);
+end instReg;
+
+architecture behav of instReg is
+
+type memArray is array(0 to 4) of std_logic_vector(31 downto 0);
+signal memData 	: memArray :=
+(
+	"00010000101011100110110000000000","00011101010111001110110000000000","00000010101011100110110011100000","00000001101011100110110011100000","00000001101011100110110011100111"	
+);
+
+ begin
+ 	inst <= memData(to_integer(unsigned(rdAdd(4 downto 0))));
+end behav;
